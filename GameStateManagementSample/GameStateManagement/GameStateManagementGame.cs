@@ -27,8 +27,8 @@ namespace GameStateManagement
     {
         #region Fields
 
-        private GraphicsDeviceManager graphics;
-        private ScreenManager screenManager;
+        private readonly GraphicsDeviceManager graphics;
+        private readonly ScreenManager screenManager;
 
         // By preloading any assets used by UI rendering, we avoid framerate glitches
         // when they suddenly need to be loaded in the middle of a menu transition.
@@ -62,8 +62,8 @@ namespace GameStateManagement
 
         protected override void Initialize()
         {
-            graphics.PreferredBackBufferWidth = 1360;
-            graphics.PreferredBackBufferHeight = 768;
+            graphics.PreferredBackBufferWidth = 1280;
+            graphics.PreferredBackBufferHeight = 1024;
             graphics.ApplyChanges();
             base.Initialize();
         }
